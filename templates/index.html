@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>TgNotes</title>
-
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.ico')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/backend-plugin.min.css')}}">
@@ -19,11 +19,12 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='/assets/vendor/@icon/dripicons/dripicons.css')}}">
 </head>
 
-<!-- loader Start -->
-<div id="loading">
-    <div id="loading-center">
-    </div>
-</div>
+<script>
+    let tg = window.Telegram.WebApp;
+    tg.initData();
+    tg.expand();
+
+</script>
 <body class="noteplus-layout">
 <div class="right-sidebar-mini right-sidebar">
     <div class="right-sidebar-panel p-0">
