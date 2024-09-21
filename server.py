@@ -11,9 +11,20 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
+    if request.method == 'POST':
+        if 'save' in request.form:
+            print(request.form)
+    return render_template('index.html')
+
+
+@app.route('/get-data', methods=['POST'])
+def get_data():
+    data = request.get_json()
+    content = data.get('content')
+    print(f'Полученные данные: {content}')
+    return jsonify({"status": "success", "received_content": content})
 
 
 if __name__ == '__main__':
