@@ -4,3 +4,4 @@ import os
 load_dotenv()
 
 DB_NAME = os.environ.get("DB_NAME")
+TOKEN = os.environ.get('TOKEN')
