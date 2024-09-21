@@ -10,7 +10,7 @@ class Base(AsyncAttrs, DeclarativeBase):
 class User(Base):
     __tablename__: str = 'users'
     id: Column = Column(Integer, primary_key=True, autoincrement=True)
-    tg_id: Column(Integer, unique=True, nullable=True)
+    tg_id: Column = Column(Integer, unique=True, nullable=True)
     username: Column = Column(String)
     folders = relationship('Folder', back_populates='user')
 
@@ -18,7 +18,7 @@ class User(Base):
 class Folder(Base):
     __tablename__: str = 'folders'
     id: Column = Column(Integer, primary_key=True, autoincrement=True)
-    user_id: Column = Column(Integer, ForeignKey('users'), nullable=False)
+    user_id: Column = Column(Integer, ForeignKey('users.id'), nullable=False)
     name: Column = Column(String, nullable=False)
     emoji: Column = Column(String)
     notes = relationship('Note', back_populates='folder')
@@ -27,6 +27,6 @@ class Folder(Base):
 class Note(Base):
     __tablename__: str = 'notes'
     id: Column = Column(Integer, primary_key=True, autoincrement=True)
-    folder_id: Column = Column(Integer, ForeignKey('folders'), nullable=False)
+    folder_id: Column = Column(Integer, ForeignKey('folders.id'), nullable=False)
     name: Column = Column(String)
     content: Column = Column(Text)
