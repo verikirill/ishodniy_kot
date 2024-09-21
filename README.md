@@ -26,6 +26,14 @@ TgNotes is a feature-rich note-taking application integrated with Telegram, desi
 
 ---
 
+## Demonstration
+
+Watch the demo (click on the image)&nbsp;&#128071;
+
+[![Preview](https://i.postimg.cc/SNfM1TmS/2024-09-21-17-00-51.png)](https://drive.google.com/file/d/1GoVlzjxeMUeYOAhw_7cgQfv4XwvRi_gT/view?usp=drive_link)
+
+---
+
 ## Tech Stack
 
 - **Backend**: Flask, SQLAlchemy, SQLite
