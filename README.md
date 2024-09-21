@@ -90,3 +90,5 @@ Feel free to contribute by submitting pull requests, reporting bugs, or suggesti
 - **Q4 2024**: Complete sticker and emoji integration, finalize advanced checklist functionalities.
 - **Q1 2025**: Full integration of advanced bot features, including note reminders and in-depth task management.
 - **Q2 2025**: Implement sharing permissions at folder level and advanced collaboration features.
+
+Read in [Russian&nbsp;&#127479;&#127482;](README-ru.md)
