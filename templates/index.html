@@ -3,16 +3,25 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title>NotePlus | Responsive Bootstrap 4 Admin Dashboard Template</title>
+      <title>TgNotes</title>
       
       <!-- Favicon -->
       <link rel="shortcut icon" href="href={{ url_for('static', filename='assets/images/favicon.ico')}}">
       <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/backend-plugin.min.css')}}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/backend.css?v=1.0.0')}}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/backend.css')}}">
       <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}">
       <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css')}}">
       <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/remixicon/fonts/remixicon.css')}}">
       <link rel="stylesheet" href="{{ url_for('static', filename='/assets/vendor/@icon/dripicons/dripicons.css')}}">  </head>
+
+  <!-- loader Start -->
+    <div id="loading">
+          <div id="loading-center">
+          </div>
+    </div>
+
+
+
   <body class="noteplus-layout  ">
     <div class="right-sidebar-mini right-sidebar">
       <div class="right-sidebar-panel p-0">
@@ -352,7 +361,7 @@
                   <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                       <i class="ri-menu-line wrapper-menu"></i>
                       <a href="../backend/index.html" class="header-logo">
-                              <img src="../assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="logo">
+                              <img src="{{ url_for('static', filename='img/logo.png')}}" class="img-fluid rounded-normal light-logo" alt="logo">
                           
                       </a>
                   </div>
@@ -392,7 +401,7 @@
                                               <a href="#" class="iq-sub-card">
                                                   <div class="media align-items-center cust-card py-3 border-bottom">
                                                       <div class="">
-                                                          <img class="avatar-50 rounded-small" src="../assets/images/user/01.jpg" alt="01">
+                                                          <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/01.jpg')}}" alt="01">
                                                       </div>
                                                       <div class="media-body ml-3">
                                                           <div class="d-flex align-items-center justify-content-between">
@@ -406,7 +415,7 @@
                                               <a href="#" class="iq-sub-card">
                                                   <div class="media align-items-center cust-card py-3 border-bottom">
                                                       <div class="">
-                                                          <img class="avatar-50 rounded-small" src="../assets/images/user/02.jpg" alt="02">
+                                                          <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/02.jpg')}}" alt="02">
                                                       </div>
                                                       <div class="media-body ml-3">
                                                           <div class="d-flex align-items-center justify-content-between">
@@ -420,7 +429,7 @@
                                               <a href="#" class="iq-sub-card">
                                                   <div class="media align-items-center cust-card py-3">
                                                       <div class="">
-                                                          <img class="avatar-50 rounded-small" src="../assets/images/user/03.jpg" alt="03">
+                                                          <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/03.jpg')}}" alt="03">
                                                       </div>
                                                       <div class="media-body ml-3">
                                                           <div class="d-flex align-items-center justify-content-between">
@@ -456,7 +465,7 @@
                                               <a href="#" class="iq-sub-card">
                                                   <div class="media align-items-center cust-card py-3 border-bottom">
                                                       <div class="">
-                                                          <img class="avatar-50 rounded-small" src="../assets/images/user/01.jpg" alt="01">
+                                                          <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/01.jpg')}}" alt="01">
                                                       </div>
                                                       <div class="media-body ml-3">
                                                           <div class="d-flex align-items-center justify-content-between">
@@ -470,7 +479,7 @@
                                               <a href="#" class="iq-sub-card">
                                                   <div class="media align-items-center cust-card py-3 border-bottom">
                                                       <div class="">
-                                                          <img class="avatar-50 rounded-small" src="../assets/images/user/02.jpg" alt="02">
+                                                          <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/02.jpg')}}" alt="02">
                                                       </div>
                                                       <div class="media-body ml-3">
                                                           <div class="d-flex align-items-center justify-content-between">
@@ -484,7 +493,7 @@
                                               <a href="#" class="iq-sub-card">
                                                   <div class="media align-items-center cust-card py-3">
                                                       <div class="">
-                                                          <img class="avatar-50 rounded-small" src="../assets/images/user/03.jpg" alt="03">
+                                                          <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/03.jpg')}}" alt="03">
                                                       </div>
                                                       <div class="media-body ml-3">
                                                           <div class="d-flex align-items-center justify-content-between">
@@ -505,7 +514,7 @@
                           </li>  
                           <li class="caption-content">
                              <a href="#" class="iq-user-toggle d-flex align-items-center justify-content-between" id="h-dropdownMenuButton001" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <img src="../assets/images/user/1.jpg" class="img-fluid rounded avatar-50" alt="user">
+                                  <img src="{{ url_for('static', filename='/assets/images/user/1.jpg')}}" class="img-fluid rounded avatar-50" alt="user">
                               </a>
                               <div class="dropdown-menu dropdown-menu-right w-100 border-0 py-2" aria-labelledby="h-dropdownMenuButton001">
                                   <a class="dropdown-item mb-2" href="../app/user-profile.html">
@@ -540,7 +549,7 @@
       <div class="iq-sidebar  sidebar-default ">
           <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
               <a href="../backend/index.html" class="header-logo">
-                  <img src="../assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="logo"> <h4 class="logo-title ml-3">NotePlus</h4>
+                  <img src="{{ url_for('static', filename='img/logo.png')}}" class="img-fluid rounded-normal light-logo" alt="logo"> <h4 class="logo-title ml-3">TgNotes</h4>
               </a>
               <div class="iq-menu-bt-sidebar">
                   <i class="las la-times wrapper-menu"></i>
@@ -548,7 +557,7 @@
           </div>    
           <div class="sidebar-caption dropdown">
               <a href="#" class="iq-user-toggle d-flex align-items-center justify-content-between" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="../assets/images/user/1.jpg" class="img-fluid rounded avatar-50 mr-3" alt="user">
+                  <img src="{{ url_for('static', filename='assets/images/user/1.jpg')}}" class="img-fluid rounded avatar-50 mr-3" alt="user">
                   <div class="caption">
                       <h6 class="mb-0 line-height">Bud Wiser</h6>
                   </div>
@@ -817,7 +826,7 @@
                                                   </a>
                                           </li>
                                           <li class="">
-                                                  <a href="../backend/ui-images.html" class="svg-icon">
+                                                  <a href="{{ url_for('static', filename='/backend/ui-images.html')}}" class="svg-icon">
                                                       <i class="">
                                                       <svg class="svg-icon" id="iq-ui-1-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -1113,7 +1122,7 @@
                   <div class="card rounded shadow-none">
                       <div class="card-body">
                           <div class="sidebarbottom-content">
-                              <div class="image"><img src="../assets/images/layouts/side-bkg.png" class="img-fluid" alt="side-bkg"></div>
+                              <div class="image"><img src="{{ url_for('static', filename='/assets/images/layouts/side-bkg.png')}}" class="img-fluid" alt="side-bkg"></div>
                               <p class="mb-0">Set Buisness Account To Explore Premiun Features</p>
                               <button type="button" class="btn bg-primary mt-3">Upgrade</button>
                           </div>
@@ -1175,7 +1184,7 @@
                                             <a href="#" class="iq-sub-card">
                                                 <div class="media align-items-center cust-card pb-3 border-bottom">
                                                     <div class="">
-                                                        <img class="avatar-50 rounded-small" src="../assets/images/user/01.jpg" alt="01">
+                                                        <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/01.jpg')}}" alt="01">
                                                     </div>
                                                     <div class="media-body ml-3">
                                                         <div class="d-flex align-items-center justify-content-between">
@@ -1189,7 +1198,7 @@
                                             <a href="#" class="iq-sub-card">
                                                 <div class="media align-items-center cust-card py-3 border-bottom">
                                                     <div class="">
-                                                        <img class="avatar-50 rounded-small" src="../assets/images/user/02.jpg" alt="02">
+                                                        <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/02.jpg')}}" alt="02">
                                                     </div>
                                                     <div class="media-body ml-3">
                                                         <div class="d-flex align-items-center justify-content-between">
@@ -1203,7 +1212,7 @@
                                             <a href="#" class="iq-sub-card">
                                                 <div class="media align-items-center cust-card pt-3">
                                                     <div class="">
-                                                        <img class="avatar-50 rounded-small" src="../assets/images/user/03.jpg" alt="03">
+                                                        <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/03.jpg')}}" alt="03">
                                                     </div>
                                                     <div class="media-body ml-3">
                                                         <div class="d-flex align-items-center justify-content-between">
@@ -1239,7 +1248,7 @@
                                             <a href="#" class="iq-sub-card">
                                                 <div class="media align-items-center cust-card pb-3 border-bottom">
                                                     <div class="">
-                                                        <img class="avatar-50 rounded-small" src="../assets/images/user/01.jpg" alt="01">
+                                                        <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/01.jpg')}}" alt="01">
                                                     </div>
                                                     <div class="media-body ml-3">
                                                         <div class="d-flex align-items-center justify-content-between">
@@ -1253,7 +1262,7 @@
                                             <a href="#" class="iq-sub-card">
                                                 <div class="media align-items-center cust-card py-3 border-bottom">
                                                     <div class="">
-                                                        <img class="avatar-50 rounded-small" src="../assets/images/user/02.jpg" alt="02">
+                                                        <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/02.jpg')}}" alt="02">
                                                     </div>
                                                     <div class="media-body ml-3">
                                                         <div class="d-flex align-items-center justify-content-between">
@@ -1267,7 +1276,7 @@
                                             <a href="#" class="iq-sub-card">
                                                 <div class="media align-items-center cust-card pt-3">
                                                     <div class="">
-                                                        <img class="avatar-50 rounded-small" src="../assets/images/user/03.jpg" alt="03">
+                                                        <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/03.jpg')}}" alt="03">
                                                     </div>
                                                     <div class="media-body ml-3">
                                                         <div class="d-flex align-items-center justify-content-between">
@@ -1312,8 +1321,8 @@
                                                         <li>Balloons</li>
                                                         <li>Cold Drinks</li>
                                                     </ul>
-                                                    <img src="../assets/images/event-note/01.png" class="img-fluid image-1" alt="image">                                                    
-                                                    <img src="../assets/images/event-note/02.png" class="img-fluid image-2" alt="image">
+                                                    <img src="{{ url_for('static', filename='/assets/images/event-note/01.png')}}" class="img-fluid image-1" alt="image">
+                                                    <img src="{{ url_for('static', filename='assets/images/event-note/02.png')}}" class="img-fluid image-2" alt="image">
                                                 </div>
                                             </div>
                                         </div>
@@ -1601,17 +1610,17 @@
                                                         <ul class="row mb-0 p-0 list-inline flex-wrap align-items-center">
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/08.jpg" class="img-fluid note-image rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='/assets/images/gallery/grid/08.jpg')}}" class="img-fluid note-image rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/05.jpg" class="img-fluid note-image rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='/assets/images/gallery/grid/05.jpg')}}" class="img-fluid note-image rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/03.jpg" class="img-fluid note-image rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='/assets/images/gallery/grid/03.jpg')}}" class="img-fluid note-image rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                         </ul>
@@ -2382,17 +2391,17 @@
                                                         <ul class="row mb-0 p-0 list-inline flex-wrap align-items-center">
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/01.jpg" class="img-fluid rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='/assets/images/gallery/grid/01.jpg')}}" class="img-fluid rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/02.jpg" class="img-fluid rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='assets/images/gallery/grid/02.jpg')}}" class="img-fluid rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/03.jpg" class="img-fluid rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='/assets/images/gallery/grid/03.jpg')}}" class="img-fluid rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                         </ul>
@@ -2902,17 +2911,17 @@
                                                         <ul class="row mb-0 p-0 list-inline flex-wrap align-items-center">
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/01.jpg" class="img-fluid rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='/assets/images/gallery/grid/01.jpg')}}" class="img-fluid rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/02.jpg" class="img-fluid rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='/assets/images/gallery/grid/02.jpg')}}" class="img-fluid rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                             <li class="col-4">
                                                                 <a href="#">
-                                                                    <img src="../assets/images/gallery/grid/03.jpg" class="img-fluid rounded" alt="" />  
+                                                                    <img src="{{ url_for('static', filename='assets/images/gallery/grid/03.jpg')}}" class="img-fluid rounded" alt="" />
                                                                 </a> 
                                                             </li>
                                                         </ul>
@@ -3143,7 +3152,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card mb-3">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/01.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/01.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3157,7 +3166,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card mb-3">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/02.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/02.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3171,7 +3180,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/03.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='/assets/images/user/03.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3283,32 +3292,32 @@
                                 <ul class="row mb-0 p-0 list-inline flex-wrap align-items-center">
                                     <li class="col-md-4 mb-4">
                                         <a href="#">
-                                            <img src="../assets/images/gallery/grid/01.jpg" class="img-fluid rounded avatar-150" alt="">  
+                                            <img src="{{ url_for('static', filename='/assets/images/gallery/grid/01.jpg')}}" class="img-fluid rounded avatar-150" alt="">
                                         </a> 
                                     </li>
                                     <li class="col-md-4 mb-4">
                                         <a href="#">
-                                            <img src="../assets/images/gallery/grid/02.jpg" class="img-fluid rounded avatar-150" alt="">  
+                                            <img src="{{ url_for('static', filename='/assets/images/gallery/grid/02.jpg')}}" class="img-fluid rounded avatar-150" alt="">
                                         </a> 
                                     </li>
                                     <li class="col-md-4 mb-4">
                                         <a href="#">
-                                            <img src="../assets/images/gallery/grid/03.jpg" class="img-fluid rounded avatar-150" alt="">  
+                                            <img src="{{ url_for('static', filename='/assets/images/gallery/grid/03.jpg')}}" class="img-fluid rounded avatar-150" alt="">
                                         </a> 
                                     </li>
                                     <li class="col-md-4">
                                         <a href="#">
-                                            <img src="../assets/images/gallery/grid/04.jpg" class="img-fluid rounded avatar-150" alt="">  
+                                            <img src="{{ url_for('static', filename='/assets/images/gallery/grid/04.jpg')}}" class="img-fluid rounded avatar-150" alt="">
                                         </a> 
                                     </li>
                                     <li class="col-md-4">
                                         <a href="#">
-                                            <img src="../assets/images/gallery/grid/05.jpg" class="img-fluid rounded avatar-150" alt="">  
+                                            <img src="{{ url_for('static', filename='assets/images/gallery/grid/05.jpg')}}" class="img-fluid rounded avatar-150" alt="">
                                         </a> 
                                     </li>
                                     <li class="col-md-4">
                                         <a href="#">
-                                            <img src="../assets/images/gallery/grid/06.jpg" class="img-fluid rounded avatar-150" alt="">  
+                                            <img src="{{ url_for('static', filename='assets/images/gallery/grid/06.jpg')}}" class="img-fluid rounded avatar-150" alt="">
                                         </a> 
                                     </li>
                                 </ul>
@@ -3318,7 +3327,7 @@
                                 <li>
                                     <div class="media align-items-center cust-card mb-3">
                                         <div class="">
-                                            <img class="avatar-50 rounded-small" src="../assets/images/user/04.jpg" alt="01">
+                                            <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/04.jpg')}}" alt="01">
                                         </div>
                                         <div class="media-body ml-3">
                                             <div class="d-flex align-items-center justify-content-between">
@@ -3351,7 +3360,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card mb-3">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/04.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/04.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3365,7 +3374,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card mb-3">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/05.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/05.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3420,7 +3429,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card mb-3">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/06.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/06.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3434,7 +3443,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card mb-3">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/07.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/07.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3448,7 +3457,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card mb-3">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/08.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/08.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3462,7 +3471,7 @@
                                     <li>
                                         <div class="media align-items-center cust-card mb-3">
                                             <div class="">
-                                                <img class="avatar-50 rounded-small" src="../assets/images/user/09.jpg" alt="01">
+                                                <img class="avatar-50 rounded-small" src="{{ url_for('static', filename='assets/images/user/09.jpg')}}" alt="01">
                                             </div>
                                             <div class="media-body ml-3">
                                                 <div class="d-flex align-items-center justify-content-between">
@@ -3552,25 +3561,25 @@
         </div>
     </footer>
     <!-- Backend Bundle JavaScript -->
-    <script src="../assets/js/backend-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/backend-bundle.min.js')}}"></script>
     
     <!-- Flextree Javascript-->
-    <script src="../assets/js/flex-tree.min.js"></script>
-    <script src="../assets/js/tree.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/flex-tree.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/tree.js')}}"></script>
     
     <!-- Table Treeview JavaScript -->
-    <script src="../assets/js/table-treeview.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/table-treeview.js')}}"></script>
     
     <!-- SweetAlert JavaScript -->
-    <script src="../assets/js/sweetalert.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/sweetalert.js')}}"></script>
     
     <!-- Chart Custom JavaScript -->
-    <script src="../assets/js/chart-custom.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/chart-custom.js')}}"></script>
     
     <!-- slider JavaScript -->
-    <script src="../assets/js/slider.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/slider.js')}}"></script>
     
     <!-- app JavaScript -->
-    <script src="../assets/js/app.js"></script>
+    <script src="{{ url_for('static', filename='/assets/js/app.js')}}"></script>
   </body>
 </html>
